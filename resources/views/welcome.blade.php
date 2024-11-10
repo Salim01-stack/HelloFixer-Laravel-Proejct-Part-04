@@ -303,7 +303,8 @@
                             <a href="{{ url('/products') }}" class="dropdown-toggle" data-toggle="dropdown"
                                 data-key="services">Services <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="{{ url('/service1') }}" data-key="service1">Air Conditioner</a></li>
+                            <li><a href="{{ url('/service1') }}" data-key="service1">Air Conditioner <br>And Appliance</a></li>
+
                                 <li><a href="{{ url('/service2') }}" data-key="service2">Television And LED</a></li>
                                 <li><a href="{{ url('/service3') }}" data-key="service3">Water Purifier</a></li>
                                 <li><a href="{{ url('/service4') }}" data-key="service4">Carpenter</a></li>
@@ -339,6 +340,7 @@
                         </li>
 
                         <li><a href="{{ url('/account') }}" class="menu-item" data-key="account">Account</a></li>
+
                         <li><a href="{{ url('/faq') }}" class="menu-item" data-key="faq">FAQ's</a></li>
                     </ul>
                 </nav>
