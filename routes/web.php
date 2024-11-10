@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/home', function () {
+    return view('userview');
+});
+
 //Route::get('/products', function () {
  //   return view('products');
 //});
@@ -39,6 +43,7 @@ Route::resource('products', ProductController::class);
 
 use App\Http\Controllers\UserController;
 Route::resource('/users', UserController::class);
+Route::get('/profilepage', [UserController::class, 'showProfile']);
 
 use App\Http\Controllers\ContactController;
 
@@ -59,8 +64,13 @@ use App\Http\Controllers\FaqController;
 
 Route::get('/faq', [FaqController::class, 'index1']);
 
+use App\Http\Controllers\allcategoriesController;
 
+Route::get('/allcategories', [allcategoriesController::class, 'index']);
 
+use App\Http\Controllers\allcategoriesnewController;
+
+Route::get('/allcategoriesnew', [allcategoriesnewController::class, 'index']);
 
 
 
@@ -136,3 +146,37 @@ Route::get('/profile', [UserController::class, 'showProfile'])->name('profile.sh
 // Route for updating profile
 Route::post('/profile/update', [UserController::class, 'updateProfile'])->name('profile.update');
 
+
+
+use App\Http\Controllers\ServiceController;
+Route::get('/service1', [ServiceController::class, 'acService']);
+Route::get('/service1/post', [ServiceController::class, 'Post']);
+Route::get('/service2', [ServiceController::class, 'TVService']);
+Route::get('/service2/post', [ServiceController::class, 'Post']);
+Route::get('/service3', [ServiceController::class, 'waterpurifier']);
+Route::get('/service3/post', [ServiceController::class, 'Post']);
+Route::get('/service4', [ServiceController::class, 'Carpenterservice']);
+Route::get('/service4/post', [ServiceController::class, 'Post']);
+Route::get('/service5', [ServiceController::class, 'ElectricianService']);
+Route::get('/service5/post', [ServiceController::class, 'Post']);
+Route::get('/service6', [ServiceController::class, 'Plumberservice']);
+Route::get('/service6/post', [ServiceController::class, 'Post']);
+Route::get('/service7', [ServiceController::class, 'Inverterandbatteryservice']);
+Route::get('/service7/post', [ServiceController::class, 'Post']);
+Route::get('/service8', [ServiceController::class, 'Car_repairingservice']);
+Route::get('/service8/post', [ServiceController::class, 'Post']);
+Route::get('/service9', [ServiceController::class, 'CCTV_CameraService']);
+Route::get('/service9/post', [ServiceController::class, 'Post']);
+Route::get('/service10', [ServiceController::class, 'CleaningService']);
+Route::get('/service10/post', [ServiceController::class, 'Post']);
+Route::get('/service11', [ServiceController::class, 'InteriorDesign']);
+Route::get('/service11/post', [ServiceController::class, 'Post']);
+Route::get('/service12', [ServiceController::class, 'WeldingService']);
+Route::get('/service12/post', [ServiceController::class, 'Post']);
+
+use App\Http\Controllers\PostController;
+Route::get('/post', [PostController::class, 'postPage']);
+
+use App\Http\Controllers\FeedbacksController;
+Route::post('/feedbacks', [FeedbacksController::class, 'store'])->name('feedbacks.store');
+Route::get('/feedbacks', function () {return view('feedbacks');})->name('feedbacks.create');
