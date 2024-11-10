@@ -68,7 +68,6 @@
     
                             <li><a href="{{ url('/account') }}" class="menu-item" data-key="account">Account</a></li>
                             <li><a href="{{ url('/faq') }}" class="menu-item" data-key="faq">FAQ's</a></li>
-                            <li><a href="{{ url('/faq') }}" class="menu-item" data-key="faq">Feedback</a></li>
                         </ul>
                     </nav>
                 </div>
