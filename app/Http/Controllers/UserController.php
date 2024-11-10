@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -27,7 +28,7 @@ class UserController extends Controller
         // Check if the user exists and verify the password
         if ($userInfo && Hash::check($pass, $userInfo->password)) {
             // Successful user login
-            return redirect('/products');
+            return redirect('/home');
         } else {
             // Invalid credentials: Clear input fields and return to the login page with errors
             return redirect()->back()
@@ -46,13 +47,12 @@ class UserController extends Controller
             'password' => Hash::make($request->input('pass')),  // Hashing the password
         ]);
 
-        return redirect('/products');
+        return redirect('/account');
+    }
+    
+    public function showProfile()
+    {
+        return view('/profilepage');
     }
 
-
-
-
-
-
-    
 }
