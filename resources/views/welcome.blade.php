@@ -22,268 +22,6 @@
 </head>
 
 <body>
-
-
-
-
-
-    <style>
-    /* Basic styles for MenuItems */
-    #MenuItems {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-    }
-
-    #MenuItems li {
-        position: relative;
-        padding: 10px;
-    }
-
-    /* Dropdown styling */
-    .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: #fff;
-        min-width: 100px;
-        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
-        z-index: 1;
-        list-style: none;
-        padding: 10px 0;
-        margin: 0;
-        opacity: 0;
-        transform: translateY(10px);
-        transition: opacity 0.3s ease, transform 0.3s ease;
-    }
-
-    /* Dropdown item styling */
-    .dropdown-content li {
-        padding: 8px 16px;
-    }
-
-    .dropdown-content li a {
-        text-decoration: none;
-        color: #333;
-        display: block;
-    }
-
-    .dropdown-content li a:before {
-        text-decoration: none;
-        color: #333;
-        display: block;
-    }
-
-    .dropdown-content li a:hover {
-        background-color: #f0f0f0;
-    }
-
-    /* Show dropdown on hover */
-    .dropdown:hover .dropdown-content {
-        display: block;
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    /* Ensuring the parent li maintains proper spacing */
-    .dropdown {
-        cursor: pointer;
-        padding-right: 20px;
-    }
-
-    /* Adjusting the positioning of the navigation */
-    .navbar nav {
-        position: relative;
-        top: 6px;
-        /* Move upward by 10px */
-        right: -250px;
-        /* Move to the right by 20px */
-    }
-
-    /* Basic styles for MenuItems */
-    #MenuItems {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        align-items: center;
-        /* Center vertically */
-    }
-
-    /* Adjust the dropdown positioning */
-    .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: #fff;
-        min-width: 100px;
-        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
-        z-index: 1;
-        list-style: none;
-        padding: 10px 0;
-        margin: 0;
-        opacity: 0;
-        transform: translateY(10px);
-        transition: opacity 0.3s ease, transform 0.3s ease;
-    }
-
-    .dropdown-content li {
-        padding: 8px 16px;
-    }
-
-    .dropdown-content li a {
-        text-decoration: none;
-        color: #333;
-        display: block;
-    }
-
-    .dropdown-content li a:hover {
-        background-color: #f0f0f0;
-    }
-
-    /* Show dropdown on hover */
-    .dropdown:hover .dropdown-content {
-        display: block;
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    /* Ensuring the parent li maintains proper spacing */
-    .dropdown {
-        cursor: pointer;
-        padding-right: 20px;
-    }
-
-    .logo {
-        display: flex;
-        /* Aligns the logo and site name horizontally */
-        align-items: center;
-        /* Center the items vertically */
-    }
-
-    .site-name {
-        font-size: 24px;
-        /* Adjust the font size as needed */
-        font-weight: 600;
-        /* Bold font for the name */
-        color: #333;
-        /* Color for the text */
-        margin-left: 15px;
-        /* Space between the logo and the name */
-        animation: fadeIn 1s ease-in-out;
-        /* Apply the animation */
-    }
-
-    /* Navigation menu styles */
-    nav {
-        margin-top: -20px;
-        /* Reduced space between logo and nav */
-    }
-
-    #MenuItems {
-        list-style: none;
-        /* Remove bullet points */
-        padding: 0;
-        /* Remove default padding */
-        margin-left: 10px;
-        /* Space between the menu and the logo/text */
-    }
-
-    #MenuItems li {
-        display: inline;
-        /* Display items inline */
-        margin-right: 15px;
-        /* Space between menu items */
-    }
-
-    #MenuItems a {
-        text-decoration: none;
-        /* Remove underline from links */
-        color: #050505;
-        /* Text color */
-        font-weight: bold;
-        /* Make the text bold */
-        font-size: 18px;
-        /* Increase text size */
-    }
-
-    .small-container {
-        width: 90%;
-        margin: auto;
-    }
-
-    /* Animation keyframes */
-    @keyframes fadeIn {
-        0% {
-            opacity: 0;
-            /* Start completely transparent */
-            transform: translateY(-20px);
-            /* Start slightly above */
-        }
-
-        100% {
-            opacity: 1;
-            /* End fully visible */
-            transform: translateY(0);
-            /* End at the original position */
-        }
-    }
-
-    .nav {
-        list-style: none;
-        /* Remove default list styling */
-        padding: 0;
-        /* Remove default padding */
-        margin: 0;
-        /* Remove default margin */
-    }
-
-    .nav>li {
-        position: relative;
-        /* Position relative for dropdown positioning */
-    }
-
-    .dropdown-menu {
-        display: none;
-        /* Hide dropdown by default */
-        position: absolute;
-        /* Position absolutely for dropdown */
-        top: 100%;
-        /* Position it below the parent element */
-        left: 0;
-        /* Align left */
-        z-index: 1000;
-        /* Ensure it appears above other content */
-    }
-
-    .dropdown:hover .dropdown-menu {
-        display: block;
-        /* Show dropdown on hover */
-    }
-
-    .dropdown-menu li {
-        white-space: nowrap;
-        /* Prevent wrapping of menu items */
-    }
-
-    .dropdown-menu a {
-        display: block;
-        /* Make the links block level for better click area */
-        padding: 8px 16px;
-        /* Add padding for clickable area */
-        text-decoration: none;
-        /* Remove underline from links */
-    }
-
-    .dropdown-menu a:hover {
-        background-color: #f1f1f1;
-        /* Change background on hover */
-    }
-
-    #copyright {
-        text-align: center;
-    }
-    </style>
-
     <div class="header">
         <div class="container">
             <div class="navbar">
@@ -369,7 +107,7 @@
         <h2 class="title" id="service-title">Appliance Repair Services Provided By HelloFixer</h2>
         <div class="row">
             <div class="col-4">
-                <a href="{{ url('/product_details') }}"><img src="{{ asset('images/AC.jpg') }}"></a>
+                <a href="{{ url('/service1') }}"><img src="{{ asset('images/AC.jpg') }}"></a>
                 <h4 id="air-conditioner">Air Conditioner</h4>
                 <div class="rating">
                     <i class="fa fa-star"></i>
@@ -381,7 +119,7 @@
                 <p></p>
             </div>
             <div class="col-4">
-                <img src="{{ asset('images/TV.jpg') }}">
+            <a href="{{ url('/service2') }}"><img src="{{ asset('images/TV.jpg') }}"></a>
                 <h4 id="television">Television And LED</h4>
                 <div class="rating">
                     <i class="fa fa-star"></i>
@@ -393,7 +131,8 @@
                 <p></p>
             </div>
             <div class="col-4">
-                <img src="{{ asset('images/Water.jpg') }}">
+            <a href="{{ url('/service3') }}">
+                <img src="{{ asset('images/Water.jpg') }}"></a>
                 <h4 id="waterpurifier">Water purifier</h4>
                 <div class="rating">
                     <i class="fa fa-star"></i>
@@ -405,7 +144,8 @@
                 <p></p>
             </div>
             <div class="col-4">
-                <img src="{{ asset('images/Carpenter.jpg') }}">
+            <a href="{{ url('/service4') }}">
+                <img src="{{ asset('images/Carpenter.jpg') }}"></a>
                 <h4 id="carpenter1">Carpenter</h4>
                 <div class="rating">
                     <i class="fa fa-star"></i>
@@ -418,7 +158,8 @@
             </div>
 
             <div class="col-4">
-                <img src="{{ asset('images/Electrician.jpg') }}">
+            <a href="{{ url('/service5') }}">
+                <img src="{{ asset('images/Electrician.jpg') }}"></a>
                 <h4 id="electrician">Electrician</h4>
                 <div class="rating">
                     <i class="fa fa-star"></i>
@@ -430,7 +171,8 @@
                 <p></p>
             </div>
             <div class="col-4">
-                <img src="{{ asset('images/Plumber.jpg') }}">
+            <a href="{{ url('/service6') }}">
+                <img src="{{ asset('images/Plumber.jpg') }}"></a>
                 <h4 id="plumber">Plumber</h4>
                 <div class="rating">
                     <i class="fa fa-star"></i>
@@ -442,7 +184,8 @@
                 <p></p>
             </div>
             <div class="col-4">
-                <img src="{{ asset('images/Inverter.jpg') }}">
+            <a href="{{ url('/service7') }}">
+                <img src="{{ asset('images/Inverter.jpg') }}"></a>
                 <h4 id="invverter_and_battery">Inverter And Battery</h4>
                 <div class="rating">
                     <i class="fa fa-star"></i>
@@ -454,7 +197,8 @@
                 <p></p>
             </div>
             <div class="col-4">
-                <img src="{{ asset('images/Car.jpg') }}">
+            <a href="{{ url('/service8') }}">
+                <img src="{{ asset('images/Car.jpg') }}"></a>
                 <h4 id="car_repairing">Car Repairing</h4>
                 <div class="rating">
                     <i class="fa fa-star"></i>
@@ -466,7 +210,8 @@
                 <p></p>
             </div>
             <div class="col-4">
-                <img src="{{ asset('images/CCTV.jpg') }}">
+            <a href="{{ url('/service9') }}">
+                <img src="{{ asset('images/CCTV.jpg') }}"></a>
                 <h4 id="cctv_camera">CCTV Camera</h4>
                 <div class="rating">
                     <i class="fa fa-star"></i>
@@ -478,7 +223,8 @@
                 <p></p>
             </div>
             <div class="col-4">
-                <img src="{{ asset('images/Cleaning.jpg') }}">
+            <a href="{{ url('/service10') }}">
+                <img src="{{ asset('images/Cleaning.jpg') }}"></a>
                 <h4 id="cleaning_services">Cleaning Services</h4>
                 <div class="rating">
                     <i class="fa fa-star"></i>
@@ -490,7 +236,8 @@
                 <p></p>
             </div>
             <div class="col-4">
-                <img src="{{ asset('images/Interior.jpg') }}">
+            <a href="{{ url('/service11') }}">
+                <img src="{{ asset('images/Interior.jpg') }}"></a>
                 <h4 id="interior_design">Interior Design</h4>
                 <div class="rating">
                     <i class="fa fa-star"></i>
@@ -502,7 +249,8 @@
                 <p></p>
             </div>
             <div class="col-4">
-                <img src="{{ asset('images/Welding.jpg') }}">
+            <a href="{{ url('/service12') }}">
+                <img src="{{ asset('images/Welding.jpg') }}"><
                 <h4 id="welding">Welding</h4>
                 <div class="rating">
                     <i class="fa fa-star"></i>
@@ -813,5 +561,260 @@
 
 
 </body>
+<style>
+    /* Basic styles for MenuItems */
+    #MenuItems {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+    }
 
+    #MenuItems li {
+        position: relative;
+        padding: 10px;
+    }
+
+    /* Dropdown styling */
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #fff;
+        min-width: 100px;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+        z-index: 1;
+        list-style: none;
+        padding: 10px 0;
+        margin: 0;
+        opacity: 0;
+        transform: translateY(10px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    /* Dropdown item styling */
+    .dropdown-content li {
+        padding: 8px 16px;
+    }
+
+    .dropdown-content li a {
+        text-decoration: none;
+        color: #333;
+        display: block;
+    }
+
+    .dropdown-content li a:before {
+        text-decoration: none;
+        color: #333;
+        display: block;
+    }
+
+    .dropdown-content li a:hover {
+        background-color: #f0f0f0;
+    }
+
+    /* Show dropdown on hover */
+    .dropdown:hover .dropdown-content {
+        display: block;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Ensuring the parent li maintains proper spacing */
+    .dropdown {
+        cursor: pointer;
+        padding-right: 20px;
+    }
+
+    /* Adjusting the positioning of the navigation */
+    .navbar nav {
+        position: relative;
+        top: 6px;
+        /* Move upward by 10px */
+        right: -250px;
+        /* Move to the right by 20px */
+    }
+
+    /* Basic styles for MenuItems */
+    #MenuItems {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        /* Center vertically */
+    }
+
+    /* Adjust the dropdown positioning */
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #fff;
+        min-width: 100px;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+        z-index: 1;
+        list-style: none;
+        padding: 10px 0;
+        margin: 0;
+        opacity: 0;
+        transform: translateY(10px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .dropdown-content li {
+        padding: 8px 16px;
+    }
+
+    .dropdown-content li a {
+        text-decoration: none;
+        color: #333;
+        display: block;
+    }
+
+    .dropdown-content li a:hover {
+        background-color: #f0f0f0;
+    }
+
+    /* Show dropdown on hover */
+    .dropdown:hover .dropdown-content {
+        display: block;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Ensuring the parent li maintains proper spacing */
+    .dropdown {
+        cursor: pointer;
+        padding-right: 20px;
+    }
+
+    .logo {
+        display: flex;
+        /* Aligns the logo and site name horizontally */
+        align-items: center;
+        /* Center the items vertically */
+    }
+
+    .site-name {
+        font-size: 24px;
+        /* Adjust the font size as needed */
+        font-weight: 600;
+        /* Bold font for the name */
+        color: #333;
+        /* Color for the text */
+        margin-left: 15px;
+        /* Space between the logo and the name */
+        animation: fadeIn 1s ease-in-out;
+        /* Apply the animation */
+    }
+
+    /* Navigation menu styles */
+    nav {
+        margin-top: -20px;
+        /* Reduced space between logo and nav */
+    }
+
+    #MenuItems {
+        list-style: none;
+        /* Remove bullet points */
+        padding: 0;
+        /* Remove default padding */
+        margin-left: 10px;
+        /* Space between the menu and the logo/text */
+    }
+
+    #MenuItems li {
+        display: inline;
+        /* Display items inline */
+        margin-right: 15px;
+        /* Space between menu items */
+    }
+
+    #MenuItems a {
+        text-decoration: none;
+        /* Remove underline from links */
+        color: #050505;
+        /* Text color */
+        font-weight: bold;
+        /* Make the text bold */
+        font-size: 18px;
+        /* Increase text size */
+    }
+
+    .small-container {
+        width: 90%;
+        margin: auto;
+    }
+
+    /* Animation keyframes */
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+            /* Start completely transparent */
+            transform: translateY(-20px);
+            /* Start slightly above */
+        }
+
+        100% {
+            opacity: 1;
+            /* End fully visible */
+            transform: translateY(0);
+            /* End at the original position */
+        }
+    }
+
+    .nav {
+        list-style: none;
+        /* Remove default list styling */
+        padding: 0;
+        /* Remove default padding */
+        margin: 0;
+        /* Remove default margin */
+    }
+
+    .nav>li {
+        position: relative;
+        /* Position relative for dropdown positioning */
+    }
+
+    .dropdown-menu {
+        display: none;
+        /* Hide dropdown by default */
+        position: absolute;
+        /* Position absolutely for dropdown */
+        top: 100%;
+        /* Position it below the parent element */
+        left: 0;
+        /* Align left */
+        z-index: 1000;
+        /* Ensure it appears above other content */
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+        /* Show dropdown on hover */
+    }
+
+    .dropdown-menu li {
+        white-space: nowrap;
+        /* Prevent wrapping of menu items */
+    }
+
+    .dropdown-menu a {
+        display: block;
+        /* Make the links block level for better click area */
+        padding: 8px 16px;
+        /* Add padding for clickable area */
+        text-decoration: none;
+        /* Remove underline from links */
+    }
+
+    .dropdown-menu a:hover {
+        background-color: #f1f1f1;
+        /* Change background on hover */
+    }
+
+    #copyright {
+        text-align: center;
+    }
+    </style>
 </html>

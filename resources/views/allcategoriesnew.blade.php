@@ -78,18 +78,62 @@
         }
 
         .content .card {
-            background-color: #F0F0F0;
+            display: flex;
+            align-items: center;
             padding: 20px;
-            margin-bottom: 20px;
+            margin: 25px;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
+
+        .content h1 {
+            font-size: 20px; /* Adjust the font size as needed */
+            font-weight: bold;
+            margin-top: 0;
+        }
+
+        .content .image-container {
+            margin-right: 30px;
+            margin-left: 20px;
+        }
+
+        .content .image-container img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .content .text-container {
+            flex-grow: 1;
+            margin-left: 20px;
+        }
+
+        .content .text-container p {
+            margin-bottom: 5px;
+        }
+
+        .content .see-details-button {
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .content .see-details-button:hover {
+            background-color: #ccc;
+        }
+
+
+
 
         .sidebar .category-item:hover {
         background-color: #E0E0E0;
         }
 
-        .content .card:hover {
-        background-color: #E0E0E0; /* Adjust the color as needed */
-        }
     </style>
 </head>
 <body>
@@ -116,15 +160,53 @@
 
         <div class="content">
             <h2>Category-Specific Content</h2>
+
+
             <div class="card">
-                <h3><span class="category-name"></span> Specific Data 1</h3>
+                <div class="image-container">
+                    <img src="http://127.0.0.1:8000/images/tasker.jpg" alt="Image">
+                </div>
+                <div class="text-container">
+                    <h1><span class="category-name"></span></h1>
+                    <p>Sub-Category</p>
+                    <p>Details</p>
+                </div>
+            <a href="#" class="see-details-button">See Details</a>
             </div>
             <div class="card">
-                <h3><span class="category-name"></span> Specific Data 2</h3>
+                <div class="image-container">
+                    <img src="http://127.0.0.1:8000/images/tasker.jpg" alt="Image">
+                </div>
+                <div class="text-container">
+                    <h1><span class="category-name"></span></h1>
+                    <p>Sub-Category</p>
+                    <p>Details</p>
+                </div>
+            <a href="#" class="see-details-button">See Details</a>
             </div>
             <div class="card">
-                <h3><span class="category-name"></span> Specific Data 3</h3>
+                <div class="image-container">
+                    <img src="http://127.0.0.1:8000/images/tasker.jpg" alt="Image">
+                </div>
+                <div class="text-container">
+                    <h1><span class="category-name"></span></h1>
+                    <p>Sub-Category</p>
+                    <p>Details</p>
+                </div>
+            <a href="#" class="see-details-button">See Details</a>
             </div>
+            <div class="card">
+                <div class="image-container">
+                    <img src="http://127.0.0.1:8000/images/tasker.jpg" alt="Image">
+                </div>
+                <div class="text-container">
+                    <h1><span class="category-name"></span></h1>
+                    <p>Sub-Category</p>
+                    <p>Details</p>
+                </div>
+            <a href="#" class="see-details-button">See Details</a>
+            </div>
+
         </div>
     </div>
 

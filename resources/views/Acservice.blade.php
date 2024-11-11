@@ -1,8 +1,11 @@
-@extends('layouts.app1')
+@extends('layouts.app3')
+
 <!-- Assuming you have a layout file -->
+<link rel="stylesheet" href="{{ url('/css/style2.css') }}">
 
 @section('content')
 <section class="contact_section layout_padding">  
+   
 <div class="container">
 
    <h3 class="title"> Air Conditioner And Appliance </h3>
@@ -176,50 +179,8 @@
 
       </div>
    </div>
-   <!-- Footer -->
-   <div class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="footer-col-1">
-                    <h3 id="app1" data-key="app1">Download Our App</h3>
-                    <p id="app2" data-key="app2">Download App for Android and ios mobile phone.</p>
-                    <div class="app-logo">
-                        <img src="{{ asset('images/play-store.png')}}">
-                        <img src="{{ asset('images/app-store.png')}}">
-                    </div>
-                </div>
-                <div class="footer-col-2">
-                    <img src="{{ asset('images/footerlogo.png')}}">
-                    <p id="Purpose" data-key="Purpose">Our Purpose Is To Sustainably Make the Pleasure and Benefits of
-                        Sports Accessible to the Many.</p>
-                </div>
-                <div class="footer-col-3">
-                    <h3 id="Useful" data-key="Useful">Useful Links</h3>
-                    <ul>
-                        <li id="Coupons" data-key="Coupons">Coupons</li>
-                        <li id="Blog_Post" data-key="Blog_Post">Blog Post</li>
-                        <li id="Return_Policy" data-key="Return_Policy">Return Policy</li>
-                        <li id="Join_Affiliate" data-key="Join_Affiliate">Join Affiliate</li>
-                    </ul>
-                </div>
-                <div class="footer-col-4">
-                    <h3 id="Follow_Us" data-key="Follow_Us">Follow Us</h3>
-                    <ul>
-                        <li id="Facebook" data-key="Facebook">Facebook</li>
-                        <li id="Twitter" data-key="Twitter">Twitter</li>
-                        <li id="Instagram" data-key="Instagram">Instagram</li>
-                        <li id="Youtube" data-key="Youtube">Youtube</li>
-                    </ul>
-                </div>
-            </div>
-            <hr>
-            <p id="copyright" data-key="copyright">Copyright 2024 - NorthSouth University</p>
-        </div>
 
 </div>
-</section>
-
-
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&display=swap');
 
@@ -242,7 +203,7 @@ html {
 }
 
 body {
-   background: radial-gradient(circle at center, #fff, #ffe6e6);
+   background:whitesmoke;
 }
 
 .container {
@@ -501,4 +462,6 @@ body {
           preveiwContainer.style.display = 'none';
         };
       });</script>
+</body>
+</html>
 @endsection
