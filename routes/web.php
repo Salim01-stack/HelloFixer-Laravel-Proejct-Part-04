@@ -21,11 +21,15 @@ Route::get('/home', function () {
     return view('userview');
 });
 
+Route::get('/techview',function (){
+    return view('techview');
+});
+
 //Route::get('/products', function () {
  //   return view('products');
 //});
 
-Route::get('/product_details', function () {
+Route::get('/product_details', function (){
     return view('product_details');
 });
 
@@ -82,16 +86,6 @@ Route::get('language/{locale}', function ($locale) {
     return redirect()->back();
 });
 
-
-
-// Admin Dashboard Route
-Route::get('/admin/dashboard', function () {
-    if (session('is_admin')) {
-        return view('admin.dashboard');  // Load the admin dashboard view
-    } else {
-        return redirect()->route('login')->withErrors(['login_error' => 'Unauthorized access.']);
-    }
-})->name('admin.dashboard');
 
 
 
